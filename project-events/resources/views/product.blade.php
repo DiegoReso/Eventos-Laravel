@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@yield('tittle', 'Produtos')
+@section('title', 'Product')
 
 
 @section('content')

@@ -1,10 +1,10 @@
 @extends('layouts.main')
 
-@yield('tittle', 'Contatos')
+@section('title', 'Contatos')
 
 
 @section('content')
-  <h1>Contatos</h1>
+
 
   @if ($busca != '')
   <h1>{{$busca}}</h1>
