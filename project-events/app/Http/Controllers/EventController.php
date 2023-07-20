@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Event;
 
+
 class EventController extends Controller
 {
 
@@ -70,7 +71,9 @@ class EventController extends Controller
 
         $event = Event::findOrFail($id);
 
-        return view('events.show', ['event' => $event]);
+        $eventOwner = $event->user->name;
+
+        return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);
 
     }
 
